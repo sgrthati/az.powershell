@@ -2,4 +2,4 @@
 cls
 sudo apt update
 sudo apt upgrade
-sudo apt install default-jdk
+sudo apt-get install openjdk-8-jdk
