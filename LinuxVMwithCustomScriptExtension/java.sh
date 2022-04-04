@@ -2,4 +2,4 @@
 cls
 sudo apt update
 sudo apt upgrade
-sudo apt install default-jdk -y
+sudo apt install default-jdk -Y
