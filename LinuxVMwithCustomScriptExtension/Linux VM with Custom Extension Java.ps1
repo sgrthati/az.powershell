@@ -29,6 +29,6 @@ for ($i=1; $i -le $Count; $i++)
 $VMLocalAdminUser = "sagar"
 $VMLocalAdminSecurePassword = ConvertTo-SecureString "Sagar@123456" -AsplainText -Force
 $Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword)
-New-AzVM -ResourceGroupName "$RG" -Name "$VM$i" -location "$location" -Image "UbuntuLTS" -VirtualNetworkName "$VNET" -Subnetname "$SUBNET1" -Credential $Credential -Size "Standard_DS1_v2" -AvailabilitySetName "$AVAILABILITYSET" -PublicIpAddressName "$PIP"
+New-AzVM -ResourceGroupName "$RG" -Name "$VM$i" -location "$location" -Image "UbuntuLTS" -VirtualNetworkName "$VNET" -Subnetname "$SUBNET1" -Credential $Credential -Size "Standard_DS1_v2" -AvailabilitySetName "$AVAILABILITYSET" -PublicIpAddressName "PIP$i"
 Set-AzVMExtension -Name 'CustomScript' -ExtensionType 'CustomScriptForLinux' -ResourceGroupName $RG -VM  $VM$i -Publisher 'Microsoft.OSTCExtensions' -SettingString $Settings -TypeHandlerVersion '1.1'
 } 
