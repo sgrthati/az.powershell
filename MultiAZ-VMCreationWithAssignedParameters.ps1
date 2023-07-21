@@ -17,9 +17,9 @@ new-azresourcegroup -Name $RG -location "eastus"
  
 #Network Security Group Creation
 
-$httprule = New-AzNetworkSecurityRuleConfig -Name "ALLOW HTTP" -Description "Allow HTTP"-Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority "100"   -SourceAddressPrefix "Internet" -SourcePortRange *  -DestinationAddressPrefix *   -DestinationPortRange 80
-$httpsrule = New-AzNetworkSecurityRuleConfig -Name "ALLOW HTTPS" -Description "Allow HTTPS"-Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority "110"   -SourceAddressPrefix "Internet" -SourcePortRange *  -DestinationAddressPrefix *   -DestinationPortRange 443
-$rdprule = New-AzNetworkSecurityRuleConfig -Name "ALLOW RDP" -Description "Allow RDP"-Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority "120"   -SourceAddressPrefix "Internet" -SourcePortRange *  -DestinationAddressPrefix *   -DestinationPortRange 3389
+$httprule = New-AzNetworkSecurityRuleConfig -Name "ALLOW_HTTP" -Description "Allow HTTP"-Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority "100"   -SourceAddressPrefix "Internet" -SourcePortRange *  -DestinationAddressPrefix *   -DestinationPortRange 80
+$httpsrule = New-AzNetworkSecurityRuleConfig -Name "ALLOW_HTTPS" -Description "Allow HTTPS"-Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority "110"   -SourceAddressPrefix "Internet" -SourcePortRange *  -DestinationAddressPrefix *   -DestinationPortRange 443
+$rdprule = New-AzNetworkSecurityRuleConfig -Name "ALLOW_RDP" -Description "Allow RDP"-Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority "120"   -SourceAddressPrefix "Internet" -SourcePortRange *  -DestinationAddressPrefix *   -DestinationPortRange 3389
 $nsg = New-AzNetworkSecurityGroup -ResourceGroupName "$RG"   -Location "EastUS" -Name "$NS" -SecurityRules $httprule,$httpsrule,$rdprule
 
 #Vnet with Single subnet creation
