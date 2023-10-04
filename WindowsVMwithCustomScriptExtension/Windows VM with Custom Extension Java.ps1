@@ -3,7 +3,7 @@ $SUBNET1 = "SRI_SUBNET_1"
 $VNET = "SRI_VNET"
 $AVAILABILITYSET = "SRI_AVAILABILITY_SET"
 $VM = "SRIVM"
-$Count= "1"
+$Count= "2"
 $location = "CentralIndia"
 
 #Resource Group Creation
