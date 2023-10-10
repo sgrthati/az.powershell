@@ -1,3 +1,7 @@
+#for applicationgateway and windows we have to .pfx format certificate for that
+#cat certificate.crt ca_bundle.crt >> fullchain.pem
+#openssl.exe pkcs12 -in fullchain.pem -inkey private.key -export -out mypfx.pfx
+
 #Copy downloaded ssl files to /etc/ssl i.e certificate.crt & ca_bundle.crt
 #copy downloaded private.key to /etc/ssl/private
 #installing apache2
