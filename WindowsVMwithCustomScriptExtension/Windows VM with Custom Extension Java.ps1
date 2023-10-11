@@ -31,6 +31,6 @@ New-AzVM -ResourceGroupName "$RG" -Name "$VM$i" -location "$location" -Image "Wi
 #to run custom script resided in storage account
 Set-AzVMCustomScriptExtension -Name "test" -Location "$location" -ResourceGroupName "$RG" -VMName "$VM$i" -StorageAccountName '<storage account name>' -ContainerName '<contqainer name>' -FileName '<File Name>' -StorageAccountKey '<Storage account security key>' -Run '<file name>'
 #to install windows IIS
-$PublicSettings = '{"commandToExecute":"powershell Add-WindowsFeature Web-Server"}'
+$PublicSettings = '{"commandToExecute":"powershell Add-WindowsFeature Web-Server -IncludeManagementTools"}'
 Set-AzVMExtension -ResourceGroupName "$RG" -ExtensionName "IIS" -VMName "$VM$i" -Location "$location" -Publisher "Microsoft.Compute" -ExtensionType "CustomScriptExtension" -TypeHandlerVersion "1.4" -SettingString $PublicSettings
 } 
