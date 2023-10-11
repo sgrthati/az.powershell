@@ -1,6 +1,8 @@
-#for applicationgateway and windows we have to .pfx format certificate for that
-#cat certificate.crt ca_bundle.crt >> fullchain.pem
-#openssl.exe pkcs12 -in fullchain.pem -inkey private.key -export -out mypfx.pfx
+#for application gateway
+#for applicationGatewat integration,it only supports which is in .pfx format certificate only
+#for that we have to combile certificate.crt and ca_bundle.crt to fullchain.crt
+#by using below command we can able to create .pfx,here fullchain.crt & private.key files are required
+#`openssl pkcs12 -export -out certificatep12.pfx -inkey private.key -in fullchain.crt`
 
 #Copy downloaded ssl files to /etc/ssl i.e certificate.crt & ca_bundle.crt
 #copy downloaded private.key to /etc/ssl/private
@@ -14,7 +16,7 @@ sudo a2ensite www.domain.com
 sudo tee -a /etc/apache2/sites-enabled/www.domain.com.conf << END
 <VirtualHost *:443>
  DocumentRoot /var/www/html
- ServerName www.domain.com
+ ServerName www.www.domain.com
  SSLEngine on
  SSLCertificateFile /etc/ssl/certificate.crt
  SSLCertificateKeyFile /etc/ssl/private/private.key
