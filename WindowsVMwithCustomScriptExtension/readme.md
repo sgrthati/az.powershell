@@ -1,12 +1,12 @@
-# `FOR CRT CERTIFICATES USING POWERSHELL`
+# `CERT CERTIFICATES USING POWERSHELL`
 
 for application gateway
 
-for applicationGatewat integration,it only supports which is in .pfx format certificate only
+for applicationGateway integration,it only supports which is in .pfx format certificate only
 
-for that we have to combile certificate.crt and ca_bundle.crt to fullchain.crt
+for that we have to combine certificate.crt and ca_bundle.crt to fullchain.crt (certificate.crt & ca_bundle.crt has to procure from cert providers like zerossl,godaddy etc )
 
-#by using below command we can able to create .pfx,here fullchain.crt & private.key files are required
+by using below command we can able to create .pfx,here fullchain.crt & private.key files are required
 
 `openssl pkcs12 -export -out certificatep12.pfx -inkey private.key -in fullchain.crt`
 
