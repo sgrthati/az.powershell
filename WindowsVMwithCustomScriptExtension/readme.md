@@ -14,7 +14,7 @@ by using below command we can able to create .pfx,here fullchain.crt & private.k
 
 to install let's Encrypt package
 
-`sudo apt update && sudo apt install letsencrypt -y``
+`sudo apt update && sudo apt install letsencrypt -y`
 
 to create a ssl cert
 
