@@ -35,7 +35,11 @@ cert will be created in PEM format,for windows servers we have to modify them in
 # adding cert to windows server
 
 1.before proceeding we have to enable Web-Server including IIS Management tools
+
 2.IIS Manager > Choose 'Server' > Server certificates > create CSR > import certificatep12.pfx
+
 3.under 'Server' > select 'site' > Bindings > add 'https'(not need to enter anything,as we are creating for default site) > Save
+
 4.under 'Server' > select 'site' > SSL Settings > Check 'require SSL' save
+
 5.restart IIS
