@@ -18,7 +18,7 @@
     
     4.deploy a GatewaySubnet in CLOUD_VNET
 
-        ![alt text]([image.png](https://github.com/sgrthati/az.powershell/blob/main/AzureNWGW_Win2019/image.png)
+        ![alt text]([image.png](https://github.com/sgrthati/az.powershell/blob/main/AzureNWGW_Win2019/image.png?raw=true)
 
     5.start deploying "Virtual Network Gateway" using Gatewaysubnet,it may take 20 to 30min for provisioning
 
