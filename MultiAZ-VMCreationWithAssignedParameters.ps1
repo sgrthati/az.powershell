@@ -1,7 +1,7 @@
 # in below script we can able to create multiple VMs with standard format 
 #below values you can change as per your requirement
 
-$RG = "loadbalancer"
+$RG = "CLOUD"
 $ADDRESS_SPACE = "10.0.0.0/16"
 $SUBNET = "10.0.0.0/24"
 $SUBNET1 = "${RG}_SUBNET1"
@@ -9,9 +9,7 @@ $VNET = "${RG}_VNET"
 $VM = "${RG}VM"
 $Count= "2"
 $NS = "${RG}_NSG"
-$location = "EastUS"
-
-
+$location = "CentralIndia"
 
 #Resource Group Creation
 
