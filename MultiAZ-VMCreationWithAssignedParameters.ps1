@@ -1,9 +1,9 @@
 # in below script we can able to create multiple VMs with standard format 
 #below values you can change as per your requirement
 
-$RG = "CLOUD"
-$ADDRESS_SPACE = "10.0.0.0/16"
-$SUBNET = "10.0.0.0/24"
+$RG = "OnPrem"
+$ADDRESS_SPACE = "192.168.0.0/16"
+$SUBNET = "192.168.0.0/24"
 $SUBNET1 = "${RG}_SUBNET1"
 $VNET = "${RG}_VNET"
 $VM = "${RG}VM"
