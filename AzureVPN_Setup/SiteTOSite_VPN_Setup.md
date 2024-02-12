@@ -18,20 +18,23 @@
     
     4.deploy a GatewaySubnet in CLOUD_VNET
 
-        ![alt text](https://github.com/sgrthati/az.powershell/blob/main/AzureNWGW_Win2019/image.png?raw=true)
-
+        ![image](https://github.com/sgrthati/az.powershell/assets/101870480/2a239507-3273-403f-98e1-2c686b2c1d03)
+        
     5.start deploying "Virtual Network Gateway" using Gatewaysubnet,it may take 20 to 30min for provisioning
 
-        ![alt text](image-1.png)
+        ![image-1](https://github.com/sgrthati/az.powershell/assets/101870480/68667347-2397-4d50-bf28-e167a1fd0451)
+
     
     6.while VPN provisioning,we will provision "Local Network Gateway"(here we are going to define the path for OnPremise)
         
-        ![alt text](image-2.png)
+        ![image-2](https://github.com/sgrthati/az.powershell/assets/101870480/ef6361ca-0ddd-4fcc-8c7d-7b6d36b2ce70)
+
     
     8.site-to-site configuration
 
         - "Add Connection" in VPN
-        - ![alt text](image-3.png)
+        - ![image-3](https://github.com/sgrthati/az.powershell/assets/101870480/570ff0ae-2eac-4cb5-bd5f-3a5e35fdb15b)
+
 
     7.Now setup OnPrem VM for VPN setup
 
