@@ -22,12 +22,12 @@
         
     5.start deploying "Virtual Network Gateway" using Gatewaysubnet,it may take 20 to 30min for provisioning
 
-        ![image-1](https://github.com/sgrthati/az.powershell/assets/101870480/68667347-2397-4d50-bf28-e167a1fd0451)
+        ![image-1](https://github.com/sgrthati/az.powershell/AzureVPN_Setup/image-1)
 
     
     6.while VPN provisioning,we will provision "Local Network Gateway"(here we are going to define the path for OnPremise)
         
-        ![image-2](https://github.com/sgrthati/az.powershell/assets/101870480/ef6361ca-0ddd-4fcc-8c7d-7b6d36b2ce70)
+        ![image-2](https://github.com/sgrthati/AZ.POWERSHELL/assets/101870480/ef6361ca-0ddd-4fcc-8c7d-7b6d36b2ce70)
 
     
     8.site-to-site configuration

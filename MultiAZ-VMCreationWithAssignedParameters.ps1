@@ -2,12 +2,12 @@
 #below values you can change as per your requirement
 
 $RG = "OnPrem"
-$ADDRESS_SPACE = "192.168.0.0/16"
-$SUBNET = "192.168.0.0/24"
+$ADDRESS_SPACE = "10.0.0.0/16"
+$SUBNET = "10.0.0.0/24"
 $SUBNET1 = "${RG}_SUBNET1"
 $VNET = "${RG}_VNET"
 $VM = "${RG}VM"
-$Count= "2"
+$Count= "1"
 $NS = "${RG}_NSG"
 $location = "CentralIndia"
 
@@ -31,10 +31,11 @@ New-AzVirtualNetwork -name "$VNET" -ResourceGroupName "$RG" -Location $location 
 
 #For Multiple VM Creation
 
-for ($i=1; $i -le $Count; $i++)
-{
-$VMLocalAdminUser = "sagar"
-$VMLocalAdminSecurePassword = ConvertTo-SecureString "Azure@240024" -AsplainText -Force
-$Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword)
-New-AzVM -ResourceGroupName "$RG" -Name "$VM$i" -location $location -Image "Win2019Datacenter" -VirtualNetworkName "$VNET" -Subnetname "$SUBNET1" -Credential $Credential -Size "Standard_DS1_v2" -SecurityGroupName "$NS" 
-}
+# for ($i=1; $i -le $Count; $i++)
+# {
+# $VMLocalAdminUser = "sagar"
+# $VMLocalAdminSecurePassword = ConvertTo-SecureString "Azure@240024" -AsplainText -Force
+# $Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword)
+# New-AzPublicIpAddress -Name "$VM$i-PIP" -ResourceGroupName "$RG" -Location "$location" -AllocationMethod Static -IpAddressVersion IPv4
+# New-AzVM -ResourceGroupName "$RG" -Name "$VM$i" -location $location -Image "Win2019Datacenter" -VirtualNetworkName "$VNET" -Subnetname "$SUBNET1" -Credential $Credential -Size "Standard_DS1_v2" -SecurityGroupName "$NS" 
+# }
