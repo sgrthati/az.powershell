@@ -18,7 +18,7 @@
     
     4.deploy a GatewaySubnet in CLOUD_VNET
 
-        ![image](https://github.com/sgrthati/az.powershell/assets/101870480/2a239507-3273-403f-98e1-2c686b2c1d03)
+        ![image](AzureVPN_Setup/images/image-1.png)
         
     5.start deploying "Virtual Network Gateway" using Gatewaysubnet,it may take 20 to 30min for provisioning
 
