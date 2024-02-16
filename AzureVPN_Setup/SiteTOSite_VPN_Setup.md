@@ -22,7 +22,7 @@
         
     5.start deploying "Virtual Network Gateway" using Gatewaysubnet,it may take 20 to 30min for provisioning
 
-        ![](image-1.png)
+        ![image-1](image-1.png)
 
     
     6.while VPN provisioning,we will provision "Local Network Gateway"(here we are going to define the path for OnPremise)
