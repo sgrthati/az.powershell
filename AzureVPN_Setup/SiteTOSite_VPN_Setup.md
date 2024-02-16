@@ -1,4 +1,4 @@
-#deploying VPN to OnPrem setup using Win2019 server
+# deploying VPN to OnPrem setup using Win2019 server
 
     1.we have to deploy 2 VirtualNetworks with different address spaces to avoid conflict
 
@@ -22,11 +22,7 @@
         
     5.start deploying "Virtual Network Gateway" using Gatewaysubnet,it may take 20 to 30min for provisioning
 
-<<<<<<< HEAD
         ![image-1](image-1.png)
-=======
-        ![image](./images/image-1.png)
->>>>>>> fae03250f11111c4868b07fa68732b11c6a9465a
 
     
     6.while VPN provisioning,we will provision "Local Network Gateway"(here we are going to define the path for OnPremise)
